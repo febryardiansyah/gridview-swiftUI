@@ -31,9 +31,11 @@ struct FrameworkDetailView: View {
             Spacer()
             
             TitleView(framework: framework)
-            Text(framework.description)
-                .font(.body)
-                .padding()
+            ScrollView {
+                Text(framework.description)
+                    .font(.body)
+                    .padding()
+            }
                 
             Spacer()
             

@@ -57,13 +57,12 @@
 		A1A83B4B2BBFB21A00809046 /* Apple-Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A1FE3A712BCE617D001BCFD8 /* Models */,
+				A1FE3A702BCE6117001BCFD8 /* ViewModels */,
+				A1FE3A6F2BCE60F6001BCFD8 /* Screens */,
 				A1A83B4C2BBFB21A00809046 /* Apple_FrameworksApp.swift */,
-				A1A83B4E2BBFB21A00809046 /* ContentView.swift */,
 				A1A83B502BBFB21C00809046 /* Assets.xcassets */,
 				A1A83B522BBFB21C00809046 /* Preview Content */,
-				A1A83B5A2BBFB25100809046 /* Framework.swift */,
-				A102F1F92BBFEC98007EC399 /* FrameworkDetailView.swift */,
-				A102F1FB2BC01AAF007EC399 /* FrameworkGridViewModel.swift */,
 			);
 			path = "Apple-Frameworks";
 			sourceTree = "<group>";
@@ -74,6 +73,31 @@
 				A1A83B532BBFB21C00809046 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A1FE3A6F2BCE60F6001BCFD8 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				A1A83B4E2BBFB21A00809046 /* ContentView.swift */,
+				A102F1F92BBFEC98007EC399 /* FrameworkDetailView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		A1FE3A702BCE6117001BCFD8 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A102F1FB2BC01AAF007EC399 /* FrameworkGridViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A1FE3A712BCE617D001BCFD8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A1A83B5A2BBFB25100809046 /* Framework.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
