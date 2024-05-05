@@ -11,26 +11,29 @@ struct FrameworkDetailView: View {
     
     var framework: Framework
     @Binding var isShowingDetailView: Bool
+    @Binding var isListView: Bool
     
     @Environment(\.openURL) var openURL
     
     var body: some View {
         VStack {
-            HStack {
-                Spacer()
-                Button(action: {
-                    isShowingDetailView = false
-                }, label: {
-                    Image(systemName: "xmark")
-                        .foregroundColor(Color(.label))
-                        .imageScale(.large)
-                        .frame(width: 44,height: 44)
-                })
-            }.padding()
+            if isListView {
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        isShowingDetailView = false
+                    }, label: {
+                        Image(systemName: "xmark")
+                            .foregroundColor(Color(.label))
+                            .imageScale(.large)
+                            .frame(width: 44,height: 44)
+                    })
+                }.padding()
+            }
             
             Spacer()
             
-            TitleView(framework: framework)
+            ItemVertical(framework: framework)
             ScrollView {
                 Text(framework.description)
                     .font(.body)
@@ -56,6 +59,6 @@ struct FrameworkDetailView: View {
 
 struct FrameworkDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        FrameworkDetailView(framework: MockData.sampleFramework,isShowingDetailView: .constant(false))
+        FrameworkDetailView(framework: MockData.sampleFramework,isShowingDetailView: .constant(false), isListView: .constant(true))
     }
 }
