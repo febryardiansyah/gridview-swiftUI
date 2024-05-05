@@ -12,7 +12,7 @@ struct ContentView: View {
     @StateObject var viewModel = FrameworkGridViewModel()
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 Toggle("List View",isOn: $viewModel.isListView)
                     .onTapGesture {
@@ -34,7 +34,7 @@ struct ContentView: View {
                         FrameworkDetailView(
                             framework: viewModel.selectedFramework ?? MockData.sampleFramework,
                             isShowingDetailView: $viewModel.isShowingDetailView,
-                            isListView: .constant(true)
+                            isListView: .constant(false)
                         )
                     })
                 } else {
@@ -44,7 +44,7 @@ struct ContentView: View {
                                 destination: FrameworkDetailView(
                                     framework: item,
                                     isShowingDetailView: $viewModel.isShowingDetailView,
-                                    isListView: .constant(false)
+                                    isListView: .constant(true)
                                 )){
                                 ItemGrid(framework: item)
                             }

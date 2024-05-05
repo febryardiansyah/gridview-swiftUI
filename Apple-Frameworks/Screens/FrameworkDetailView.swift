@@ -17,7 +17,7 @@ struct FrameworkDetailView: View {
     
     var body: some View {
         VStack {
-            if isListView {
+            if !isListView {
                 HStack {
                     Spacer()
                     Button(action: {
